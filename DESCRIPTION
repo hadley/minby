@@ -17,3 +17,6 @@ Depends:
 LazyData: true
 URL: https://github.com/hadley/minby
 BugReports: https://github.com/hadley/minby/issues
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
