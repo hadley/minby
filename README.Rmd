@@ -1,0 +1,39 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# minby
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of minby is to solve the common problem of finding the minimum of a variable broken down by a group. To save you even more time, it includes a precomputed dataset giving the answer to one of the most important data science questions of 2022: what is the minimum of mpg by cyl?
+
+## Installation
+
+You can install the development version of minby like so:
+
+``` r
+remotes::install_github("hadley/minby")
+```
+
+## Example
+
+```{r example}
+library(minby)
+min_mpg_by_cyl
+
+mtcars |> min_by(cyl, c(vs, am))
+mtcars |> min_by(where(is.numeric), cyl)
+```
